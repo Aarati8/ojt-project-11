@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Information</title>
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="images/school-logo1.png">
     <style>
         body {
@@ -27,16 +27,7 @@
             left: 0;
             z-index: 20;
         }
-
-        .logo img {
-            height: 82px;
-            width: auto;
-            margin-left: 5px;
-            position: relative;
-            top: 22px;
-        }
-
-        nav ul {
+          nav ul {
             list-style: none;
             display: flex;
             align-items: center;
@@ -45,7 +36,8 @@
         nav ul li {
             position: relative;
             margin: 0 15px;
-            right: 150px;
+            right: 80px;
+            font-size: 18px;
         }
 
         nav ul li a {
@@ -107,19 +99,31 @@ nav ul .submenu li a:hover {
   color: white !important;
   padding-left: 25px !important; 
 }
-.title1 a{
+
+
+           .title1 a{
   text-decoration: none;
   color: #f3f3f3;
   position: relative;
-  bottom: 50px;
+  bottom: 48px;
   left: 85px;
-  font-size: 22px;
+  font-size: 20px;
 }
+
+.logo img {
+            height: 82px;
+            width: auto;
+            margin-left: 5px;
+            position: relative;
+            top: 38px;
+        
+        }
+
         /* Banner Styles */
         .banner {
             width: 100%;
             height: 300px;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+           background: linear-gradient(135deg, #003366 0%, #004080 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -137,7 +141,7 @@ nav ul .submenu li a:hover {
         }
 
         .banner .card img {
-            width: 100%;
+            width: 80%;
             height: 100%;
             object-fit: cover;
         }
@@ -161,11 +165,11 @@ nav ul .submenu li a:hover {
             display: flex;
             min-height: calc(100vh - 400px);
             position: relative;
-            padding-right: 500px;
+            padding-right: 400px;
         }
         
         .sidebar {
-            width: 380px; 
+            width: 500px; 
             background-color: #f8f9fa;
             padding: 30px 15px 30px 200px;
             border-right: 1px solid #e0e0e0;
@@ -354,7 +358,8 @@ nav ul .submenu li a:hover {
 
         
         .content-wrapper {
-            max-width: 900px; /
+            max-width: 900px; 
+            
         }
 
         /* Responsive Design */
@@ -548,9 +553,6 @@ iframe{
                             Shivapuri Secondary School
                         </a></h3>       
                      </div>
-                     <button class="menu-toggle" id="menuToggle">
-            <i class="fas fa-bars"></i>
-        </button>
         <nav>
             <ul>
                 <li><a href="about.html">About</a>
@@ -563,14 +565,14 @@ iframe{
                         <li><a href="about-details.html?section=facilities">Facilities</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Admissions</a>
+                <li><a href="Admissions.html">Admissions</a>
                     <ul class="submenu">
                         <li><a href="pre.html">Pre-School Level</a></li>
                         <li><a href="primary.html">Primary School Level</a></li>
                         <li><a href="lower.html">Lower Secondary Level</a></li>
                         <li><a href="secondary.html">Secondary Level</a></li>
                         <li><a href="higher.html">Higher Secondary Level</a></li>
-                        <li><a href="bachloer.html">Graduate</a></li>
+                        <li><a href="under.html">Graduate</a></li>
                     </ul>
                 </li>
                 <li><a href="department.html">Departments & Programs</a></li>
@@ -685,6 +687,7 @@ iframe{
 
     
     <a href="visitor.html" class="back-button">Back to Visitor</a>
+    <footer>
 <div class="footer-container">
             <div class="footer-column">
                 <h3>Contact Us</h3>

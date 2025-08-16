@@ -854,18 +854,22 @@ h1{
 
    .course {
         display: flex;
-        row-gap: 10px;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        transform: translateX(40px); 
+      flex-direction: row;
+        transform: translateX(60px); 
     }
 
-    .course-box {
-        flex: 0.5 0.5 5%;
-     column-gap: 0;
-        /* border: 1px solid #ddd; */  /* ← Remove or comment this out */
-       /* padding: 10px; */           /* ← Optional: remove if you want tighter layout */
-      /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */ /* ← Remove the shadow */
+     .course-box {
+        position: relative;
+        left: 50px;
+        
+       
+    }
+
+    .course-box1 {
+        position: relative;
+        right: 100px;
+       
+       
     }
 
 
@@ -962,7 +966,7 @@ h1{
                         <li><a href="lower.html">Lower Secondary Level</a></li>
                         <li><a href="secondary.html">Secondary Level</a></li>
                         <li><a href="higher.html">Higher Secondary Level</a></li>
-                        <li><a href="bachloer.html">Graduate</a></li>
+                        <li><a href="under.html">Graduate</a></li>
                     </ul>
                 </li>
                 <li><a href="department.html">Departments & Programs</a></li>
@@ -1153,7 +1157,7 @@ window.addEventListener("scroll", () => {
 </div>
 <br><br><br><br>
 <div class="bgg22">
- <h1>SHIVAPURI AT INTERNATIONAL LEVEL</h1>
+ <h1 style="position: relative; left: 105px;">SHIVAPURI AT INTERNATIONAL LEVEL</h1>
   <section class="course">
     <div class="course-box">
       <img src="images/canopy.png" alt="Canopy Nepal" class="image1" />
@@ -1164,7 +1168,7 @@ window.addEventListener("scroll", () => {
         <button class="read-more-btn">Read More</button>
     </div>
     </div>
-    <div class="course-box">
+    <div class="course-box1">
       <img src="images/isa.jpg" alt="ISA" class="image2" />
       <div class="text-overlay">
         <h3>INTERNATIONAL SCHOOL AWARDS</h3>
