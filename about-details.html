@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivapuri Secondary School - About Details</title>
+    <link rel="icon" type="image/x-icon" href="images/school-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ===== BASE STYLES ===== */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ===== BANNER STYLES ===== */
+        .banner {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 0;
+        }
+
+        .banner .card {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .banner .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .banner-text {
+            text-align: center;
+            color: white;
+            z-index: 2;
+        }
+
+        .banner-text h3 {
+            font-size: 2.5rem;
+            margin-bottom: 0;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* ===== LAYOUT CONTAINERS ===== */
+        .content-container {
+            display: flex;
+            flex: 1;
+            position: relative;
+        }
+
+        .sidebar {
+            width: 480px;
+            background-color: #f8f9fa;
+            padding: 30px 15px 30px 200px;
+            border-right: 1px solid #e0e0e0;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 40px 50px 80px 50px;
+            max-width: calc(100%-280px);
+        }
+
+        .content-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* ===== SIDEBAR STYLES ===== */
+        .sidebar-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #003366;
+            margin-bottom: 30px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #003366;
+            padding-left: 15px;
+        }
+
+        .sidebar-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-list li {
+            padding: 18px 20px 18px 30px;
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+            font-size: 17px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            line-height: 1.4;
+        }
+
+        .sidebar-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .sidebar-list li:hover {
+            border-left: 3px solid #003366;
+            background-color: #e9ecef;
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar-list li.active {
+            border-left: 3px solid #003366;
+            background-color: #e9ecef;
+            font-weight: 600;
+            color: #003366;
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1 {
+            color: #003366;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.3;
+            border-bottom: 3px solid #f18930;
+            padding-bottom: 15px;
+        }
+
+        h3 {
+            color: #003366;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        h4 {
+            color: #003366;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        p,
+        span {
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 16px;
+            word-spacing: 0.5px;
+            letter-spacing: 0.2px;
+        }
+
+        strong {
+            color: #003366;
+            font-weight: 600;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        /* ===== CONTENT SECTIONS ===== */
+        .content-section {
+            display: none;
+            padding: 20px 0;
+        }
+
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .content-section>p:first-of-type {
+            font-size: 17px;
+            font-weight: 500;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            line-height: 1.9;
+        }
+
+        .content-section ul {
+            margin: 20px 0;
+            padding-right: 25px;
+        }
+
+        .content-section ul li {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            color: #444;
+            font-size: 16px;
+            position: relative;
+        }
+
+        .content-section ul li::marker {
+            color: #f18930;
+            font-weight: bold;
+        }
+
+        /* ===== INFO PAIRS ===== */
+        .info-pair {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: flex-start;
+        }
+
+        .info-pair strong {
+            min-width: 180px;
+            flex-shrink: 0;
+        }
+
+        .info-pair span {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        /* ===== TABLE STYLES ===== */
+        #facts-and-figures {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        #facts-and-figures th,
+        #facts-and-figures td {
+            text-align: left;
+            padding: 15px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 16px;
+        }
+
+        #facts-and-figures th {
+            background-color: #f8f9fa;
+            color: #003366;
+            font-weight: 600;
+        }
+
+        #facts-and-figures tfoot th {
+            background-color: #003366;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* ===== BACK BUTTON ===== */
+        .back-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #003366;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 51, 102, 0.3);
+            font-weight: 500;
+            font-size: 14px;
+            z-index: 1001;
+        }
+
+        .back-button:hover {
+            background-color: #004080;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 51, 102, 0.4);
+        }
+
+        .back-button::before {
+            content: "←";
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1200px) {
+            .main-content {
+                padding: 35px 40px 80px 40px;
+            }
+
+            .content-wrapper {
+                max-width: 800px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content-container {
+                flex-direction: column;
+                flex: 1;
+            }
+
+            .sidebar {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .main-content {
+                max-width: 100%;
+                padding: 25px 20px 80px 20px;
+            }
+
+            .content-wrapper {
+                max-width: 100%;
+            }
+
+            .banner-text h3 {
+                font-size: 2rem;
+            }
+
+            h1 {
+                font-size: 1.9rem;
+                margin-bottom: 25px;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+                margin-top: 30px;
+                margin-bottom: 18px;
+            }
+
+            h4 {
+                font-size: 1.1rem;
+                margin-top: 22px;
+                margin-bottom: 14px;
+            }
+
+            p,
+            span {
+                font-size: 15px;
+                text-align: left;
+                line-height: 1.7;
+                margin-bottom: 18px;
+            }
+
+            .content-section>p:first-of-type {
+                font-size: 16px;
+                margin-bottom: 22px;
+            }
+
+            .sidebar-list li {
+                font-size: 16px;
+                padding: 16px 18px;
+            }
+
+            .sidebar-title {
+                font-size: 20px;
+            }
+
+            .info-pair {
+                flex-direction: column;
+                margin-bottom: 18px;
+            }
+
+            .info-pair strong {
+                min-width: auto;
+                margin-bottom: 5px;
+            }
+
+            .back-button {
+                bottom: 20px;
+                right: 20px;
+                padding: 12px 20px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-content {
+                padding: 20px 15px 80px 15px;
+            }
+
+            .banner-text h3 {
+                font-size: 1.8rem;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+                margin-bottom: 20px;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+                margin-top: 25px;
+                margin-bottom: 15px;
+            }
+
+            h4 {
+                font-size: 1.05rem;
+                margin-top: 20px;
+                margin-bottom: 12px;
+            }
+
+            p,
+            span {
+                font-size: 14px;
+                line-height: 1.6;
+                margin-bottom: 16px;
+            }
+
+            .content-section>p:first-of-type {
+                font-size: 15px;
+                margin-bottom: 20px;
+            }
+
+            .sidebar-list li {
+                font-size: 15px;
+                padding: 14px 16px;
+            }
+
+            .sidebar-title {
+                font-size: 18px;
+            }
+
+            #facts-and-figures th,
+            #facts-and-figures td {
+                padding: 12px 15px;
+                font-size: 14px;
+            }
+
+            .back-button {
+                bottom: 15px;
+                right: 15px;
+                padding: 10px 16px;
+                font-size: 12px;
+            }
+        }
+        table {
+  border-collapse: collapse;
+  width: 88%;
+  
+}
+
+th, td {
+  text-align: left;
+  padding: 12px;
+  font-size: 14px;
+}
+tr {
+    border-bottom: 1px solid #acaaaa;
+}
+
+footer {
+    background: #343434;
+    color: white;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.footer-column {
+    padding: 0 15px;
+}
+
+.footer-column h3 {
+    color: #f18930;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #f18930;
+}
+
+.footer-column p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.footer-links {
+    list-style: none;
+    text-align: start;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+    position: relative;
+    /* margin-left: 70px; */
+    /* left: 0; */
+    right: 42.5px;
+    text-align: start;
+    padding-left: 15px;
+}
+
+.footer-links li::before {
+    text-align: start;
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #f18930;
+}
+
+.footer-links a {
+    text-align: start;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f18930;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #f18930;
+}
+
+.footer-bottom {
+    background: #f18930;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-bottom p {
+    color: #343434;
+    margin: 0;
+    font-weight: 500;
+}
+
+
+    </style>
+</head>
+
+<body>
+      <header>
+        <div class="logo">
+ <img src="images/school-logo1.png" alt="scl-logo" class="logo">
+                        <h3 class="title1"><a href="homee.html">
+                            Shivapuri Secondary School
+                        </a></h3>       
+                     </div>
+                     <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a>
+                    <ul class="submenu">
+                        <li><a href="about-details.html?section=general-info">General Information</a></li>
+                        <li><a href="about-details.html?section=history">History</a></li>
+                        <li><a href="about-details.html?section=administrators">Current Administrators</a></li>
+                        <li><a href="about-details.html?section=presidents">Former President</a></li>
+                        <li><a href="about-details.html?section=facts">Facts & Figures</a></li>
+                        <li><a href="about-details.html?section=facilities">Facilities</a></li>
+                    </ul>
+                </li>
+                <li><a href="Admissions.html">Admissions</a>
+                    <ul class="submenu">
+                        <li><a href="pre.html">Pre-School Level</a></li>
+                        <li><a href="primary.html">Primary School Level</a></li>
+                        <li><a href="lower.html">Lower Secondary Level</a></li>
+                        <li><a href="secondary.html">Secondary Level</a></li>
+                        <li><a href="higher.html">Higher Secondary Level</a></li>
+                        <li><a href="bachloer.html">Graduate</a></li>
+                    </ul>
+                </li>
+                <li><a href="department.html">Departments & Programs</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="visitor.html">Visitor</a>
+                    <ul class="submenu">
+                        <li><a href="info1.html">Visitor Information</a></li>
+                        <li><a href="info2.html">School Information</a></li>
+                        <li><a href="info3.html">Experience Our School</a></li>
+                    </ul>
+                </li>
+                <li><a href="visitor.html">Visitor</a></li>
+                <li><a href="student-life.html">Student Life</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Banner Section -->
+    <div class="banner">
+        <div class="card">
+            <img src="images/about.png"
+                alt="School Banner">
+        </div>
+        <div class="banner-text">
+            <h3 id="banner-title">General Information</h3>
+        </div>
+    </div>
+
+    <!-- Content Container -->
+    <div class="content-container">
+        <div class="sidebar">
+            <div class="sidebar-title">About School</div>
+            <ul class="sidebar-list">
+                <li class="active" onclick="showSection('general-info')">General Information</li>
+                <li onclick="showSection('history')">History</li>
+                <li onclick="showSection('administrators')">Current Administration</li>
+                <li onclick="showSection('presidents')">Formal Presidents</li>
+                <li onclick="showSection('facts')">Facts and Figures</li>
+                <li onclick="showSection('facilities')">Facilities</li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="content-wrapper">
+                <!-- General Info -->
+                <div id="general-info" class="content-section active">
+                    <h1>General Information</h1>
+                    <p>Shivapuri Secondary School, established in 1948 A.D. (2005 B.S.), is a model public school of
+                        Maharajgunj, Kathmandu, that stands as a pillar of Nepal's educational hub. Having a history of
+                        over 75 years, it has ever pursued its vision of providing equal, quality education to students
+                        belonging to different socio-economic backgrounds.</p>
+
+                    <p>It has school-level affiliations with the National Examinations Board (NEB) and undergraduate
+                        affiliations with Tribhuvan University (TU). The school is currently enrolling more than 1,350
+                        students in its rolls and is served by an extremely dedicated 65-member faculty specialized in
+                        various fields.</p>
+
+                    <p>The response unfolds in a campus setting that mirrors across multiple buildings equipped with
+                        high-tech classrooms, digital teaching boards, high-speed internet connectivity, a library of
+                        more than 10,000 physical and electronic books, and multipurpose auditoria for academic and
+                        extracurricular activities. Shivapuri's educational approach is a blend of intensive academic
+                        preparation with values-based education focusing on discipline, compassion, and citizenship.</p>
+
+                    <h3>Academic Offerings</h3>
+
+                    <h4>School Level (NEB):</h4>
+                    <p><strong>+2 Management:</strong> The curriculum is designed to provide students with general and
+                        applied knowledge in fields such as accounting, business economics, marketing, and human
+                        resource management. Special seminars, internships, and field work are integrated into train
+                        students for real challenges.</p>
+
+                    <h4>Technical Stream – Computer Engineering (Grades 9–12):</h4>
+                    <p>Established in response to Nepal's growing demand for technically competent youth, this stream is
+                        equivalent to a Diploma in Computer Engineering. Courses consist of structured programming,
+                        computer hardware maintenance and networking, and software design. Entrance is based on merit
+                        and personal motivation to encourage academic excellence and career focus.</p>
+
+                    <h4>College Level (TU):</h4>
+                    <p><strong>Bachelor of Business Studies (BBS):</strong> 4-year undergraduate degree specializing in
+                        business strategy, entrepreneurship, managerial economics, and business research. Analytical
+                        reasoning, teamwork, leadership, and decision-making are the cornerstone of the curriculum. Its
+                        graduates secure over 97% employment or higher study placement within six months of graduation.
+                    </p>
+
+                    <h3>Core Values & Digital Integration</h3>
+                    <p>Shivapuri is committed to all-round development so that students not only graduate with degrees
+                        but also with a well-rounded worldview about life. Its embracing of digital classrooms, smart
+                        boards, virtual labs, and hybrid models of learning has put it on the cutting edge of public
+                        school education. Regular updation of the IT infrastructure ensures teachers and students remain
+                        digitally equipped and globally competitive.</p>
+
+                    <p>The institution has been formally granted the title of a model school by Kathmandu Metropolitan
+                        City in light of its success in pursuing technical and computer-based learning at the level of
+                        community schools.</p>
+
+                    <h3>Community Impact</h3>
+                    <p>Aside from education, Shivapuri also conducts regular community outreach activities. Some of its
+                        achievements include:</p>
+                    <ul>
+                        <li>HPV vaccination drive, launched with the collaboration of the Ministry of Health and
+                            inaugurated by Prime Minister KP Sharma Oli, focused on public health for adolescent girls.
+                        </li>
+                        <li>Participation in the President's Education Reform Programme, where students participate in
+                            policy input design.</li>
+                        <li>Hosting annual environmental awareness weeks, tree-planting drives, and national development
+                            public debate sessions.</li>
+                    </ul>
+                </div>
+
+                <!-- History -->
+                <div id="history" class="content-section">
+                    <h1>History</h1>
+
+                    <h3>Founding & Early Challenges (1948–2010)</h3>
+                    <p>Shivapuri's history is firmly rooted in Nepal's post-Rana democratic renaissance. It was
+                        established as a neighborhood community school by local educators, social reformers, and
+                        philanthropists and emerged as a symbol of educational transformation at a time when access to
+                        schools was strictly restricted, especially for marginalized sections of society.</p>
+
+                    <p>In its early years, the school operated in rented buildings using volunteer teachers and limited
+                        infrastructure. Despite adversity, including opposition to formal schooling and lack of
+                        infrastructure, the school grew incrementally driven by community commitment and sponsorship
+                        from grassroots organizations.</p>
+
+                    <p>The initial attempts at initiating a technical stream were brought about by the approval of the
+                        curriculum, teachers' availability, and equipment purchase. Despite this, through collaborations
+                        with Kathmandu Metropolitan City and donor support schemes from abroad, Shivapuri was laying the
+                        groundwork for further growth in future years.</p>
+
+                    <h3>Growth & Modernization (2010–Present)</h3>
+                    <p>Shivapuri established Shivapuri College in 2010 due to alumni proposals and growing demand for
+                        access to higher education within the area, initiating the TU-affiliated BBS program. It was a
+                        transition from being a school to a composite institution offering secondary and tertiary
+                        education under one umbrella.</p>
+
+                    <p>Shivapuri, in 2015, became one of the very first community schools in Nepal to introduce a
+                        Computer Engineering stream in Grades 9–12. The curriculum for the technical streams was
+                        developed in consultation with IT professionals and TU advisors to make it relevant and
+                        challenging.</p>
+
+                    <p>In the 2020s, Shivapuri made expansion plans to include new schools of Hotel Management,
+                        Information Technology, and Tourism that align with Nepal's emerging sectors of the economy. It
+                        also invested in e-learning modules, and smart classrooms and digital attendance systems to
+                        modernize administrative efficiency.</p>
+
+                    <h3>Alumni Legacy</h3>
+                    <p>Shivapuri boasts an illustrious legacy of alumni who have left their mark on numerous sectors.
+                        Some prominent alumni include:</p>
+                    <ul>
+                        <li>Senior bureaucrats in the Government of Nepal</li>
+                        <li>Nepal Rastra Bank and commercial banks senior officials</li>
+                        <li>Founders of software companies and tech startups</li>
+                        <li>Professors in Tribhuvan and Kathmandu University</li>
+                        <li>Diplomats and social activists</li>
+                    </ul>
+                </div>
+
+                <!-- Administrators -->
+                <div id="administrators" class="content-section">
+                    <h1>Current Administration</h1>
+
+                    <p><strong>Campus Chief:</strong> Dibakar Durdarshi, appointed in 2021, is an advocate for
+                        skills-based, career-oriented education and has introduced many capacity-building initiatives
+                        for teachers and students.</p>
+
+                    <p><strong>CMC Chairman:</strong> Jeet Bahadur Thapa oversees infrastructure rejuvenation, public
+                        partnerships, and donor engagement.</p>
+
+                    <h3>Faculty & Staff</h3>
+                    <p>The college consists of 65+ teaching faculty, all of whom are well-qualified in their area.</p>
+
+                    <h4>Faculty are regularly trained in:</h4>
+                    <ul>
+                        <li>Digital pedagogy</li>
+                        <li>Inclusive classroom management</li>
+                        <li>Research methodology</li>
+                        <li>Student mental health and counseling</li>
+                    </ul>
+
+                    <p>Staff are selected through competitive processes, and a few are active contributors to national
+                        academic journals and curriculum development committees.</p>
+
+                    <h3>Governance Model</h3>
+                    <p>Shivapuri has a blended public-community model of governance. The key features are:</p>
+                    <ul>
+                        <li>College Management Committee (CMC) consisting of faculty, local government representatives,
+                            and community leaders</li>
+                        <li>School Management Committee (SMC) with parents' representatives to ensure transparency</li>
+                        <li>Regular academic audits and student feedback surveys</li>
+                    </ul>
+
+                    <p>The structure focuses on accountability, teamwork, and representation, so that a balanced
+                        governing body can ensure effective management.</p>
+                </div>
+
+                <!-- Presidents -->
+                <div id="presidents" class="content-section">
+                    <h1>Formal Presidents</h1>
+                    <p>Shivapuri Secondary School has been guided by several visionary leaders whose contributions
+                        helped shape its values, infrastructure, and progressive educational environment.</p>
+                    <p>Each president has brought unique perspectives and initiatives that have contributed to the
+                        school's growth and reputation in the educational community.</p>
+                    <p>Their leadership has been instrumental in establishing the school as a respected institution in
+                        Nepal's educational landscape.</p>
+                </div>
+
+                <!-- Facts -->
+                <div id="facts" class="content-section">
+                    <h1>Facts and Figures</h1>
+                    <h3>Basic Information</h3>
+                    <strong>Grades:</strong>
+                    <span> Nursery to Grade 12</span>
+                    <br>
+                    <strong>Total Students:</strong>
+                    <span>982</span>
+                    <br>
+                    <strong>Faculty Members:</strong>
+                    <span>65</span>
+
+                    <h3>Streams Offered:</h3>
+                    <ul>
+                        <li>Ten Plus Two (+2) Management under the National Examinations Board</li>
+                        <li>Computer Engineering (Technical Program for Grades 9–12)</li>
+                    </ul>
+
+                    <h3>Scholarships</h3>
+                    <h4>To promote inclusivity and merit, the school offers:</h4>
+                    <ul>
+                        <li>Dalit Scholarship for underprivileged communities</li>
+                        <li>Girls’ Scholarship for Grades 1–8</li>
+                        <li>Merit and Need-Based Scholarships for outstanding and financially challenged students</li>
+                    </ul>
+                    <h3> Sponsored Schools</h3>
+                    <ul>
+                        <li>Brihaspati Vidyasadan – Maligaun/Naxal, Kathmandu</li>
+                        <li>United Academy – Kumaripati, Lalitpur</li>
+                        <li>KMC Lalitpur – Balkumari, Mahalaxmi, Lalitpur</li>
+                    </ul>
+
+                    <!---Table-->
+                    <section id="facts-and-figures">
+                        <h3>Academics and Students</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Grade</th>
+                                    <th>Number of Students</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Early Childhood Development</td>
+                                    <td>33</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>37</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>49</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>51</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>73</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>81</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>90</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>106</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>133</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>176</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>153</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Total Students</th>
+                                    <th>982</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+
+                        <p><small>Source: 2082 IEMIS Report, CEHRD</small></p>
+                    </section>
+
+
+
+                </div>
+
+                <!---Facilities-->
+                <div id="facilities" class="content-section">
+                    <h1>Facilities</h1>
+
+                    <h3>Academic Infrastructure</h3>
+                    <p>Shivapuri infrastructure is specially designed with 21st-century education in mind:</p>
+
+                    <div class="info-pair">
+                        <strong>Computer Lab:</strong>
+                        <span>More than 50 networked computers with broadband internet connectivity pre-installed with
+                            programming and design software.</span>
+                    </div>
+
+                    <div class="info-pair">
+                        <strong>Science Laboratories:</strong>
+                        <span>Dedicated labs for Physics, Chemistry, and Biology equipped with modern tools, safety
+                            systems, and demonstration facilities.</span>
+                    </div>
+
+                    <div class="info-pair">
+                        <strong>Library:</strong>
+                        <span>A well-lit, air-cooled facility with 10,000+ titles, multimedia stations, and
+                            subscriptions to national and international journals.</span>
+                    </div>
+
+                    <div class="info-pair">
+                        <strong>Multipurpose Auditorium:</strong>
+                        <span>Equipped with projectors, sound systems, and seating for 300+ participants.</span>
+                    </div>
+
+                    <h3>Extracurricular Activities</h3>
+                    <p>Shivapuri emphasizes balanced growth through diverse activities:</p>
+
+                    <div class="info-pair">
+                        <strong>Robotics Club:</strong>
+                        <span>Builds autonomous bots and represents the school at national tech expos.</span>
+                    </div>
+
+                    <div class="info-pair">
+                        <strong>Literary and Debate Society:</strong>
+                        <span>Conducts inter-school debates, poetry recitals, and publication drives.</span>
+                    </div>
+
+                    <div class="info-pair">
+                        <strong>Shivapuri Mahotsav:</strong>
+                        <span>A festive annual celebration with music, cultural performances, and exhibitions.</span>
+                    </div>
+
+                    <div class="info-pair">
+                        <strong>Athletics & Sports:</strong>
+                        <span>Inter-house football, basketball, and martial arts sports.</span>
+                    </div>
+
+                    <h3>Student Support Services</h3>
+
+                    <div class="info-pair">
+                        <strong>Cafeteria:</strong>
+                        <span>Balanced food at subsidized prices.</span>
+                    </div>
+
+                    <div class="info-pair">
+                        <strong>Counseling Unit:</strong>
+                        <span>Qualified psychologists to assist in emotional well-being.</span>
+                    </div>
+
+                    <div class="info-pair">
+                        <strong>Health Center:</strong>
+                        <span>Equipped for first aid and minor illnesses; works in conjunction with TU Teaching Hospital
+                            for referrals.</span>
+                    </div>
+
+                    <div class="info-pair">
+                        <strong>Career Cell:</strong>
+                        <span>Provides resume-building workshops, internships, and alumni mentorship.</span>
+                    </div>
+                </div>
+
+                <!-- Floating Back Button -->
+                <a href="about.html" class="back-button">Back to About</a>
+
+                <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> Email: shivapuri@enet.com.np</p>
+                <p><i class="fas fa-phone"></i> Phone: 4522877, 4510877</p>
+                <p><i class="fas fa-map-marker-alt"></i> Address: Maharajgunj, Kathmandu</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Admissions.html">Admissions</a></li>
+                    <li><a href="department.html">Departments & Programs</a></li>
+                    <li><a href="news.html">News and Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="twitter.com"><i class="fab fa-twitter"></i></a>
+                    <a href="instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="youtube.com"><i class="fab fa-youtube"></i></a>
+                    <a href="linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p style="margin-top: 20px;">Subscribe to our school</p>
+                <input type="email" placeholder="Your email" style="padding: 8px; width: 100%; border-radius: 4px; border: none;">
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shivapuri Secondary School. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+
+<script>
+    // Banner content for each section - only titles now
+    const bannerContent = {
+        'general-info': {
+            title: 'General Information'
+        },
+        'history': {
+            title: 'History'
+        },
+        'administrators': {
+            title: 'Current Administration'
+        },
+        'presidents': {
+            title: 'Formal Presidents'
+        },
+        'facts': {
+            title: 'Facts and Figures'
+        },
+        'facilities': {
+            title: 'Facilities'
+        },
+    };
+
+    function updateBanner(sectionId) {
+        const bannerTitle = document.getElementById('banner-title');
+
+        if (bannerContent[sectionId]) {
+            bannerTitle.textContent = bannerContent[sectionId].title;
+        }
+    }
+
+    function showSection(sectionId) {
+        // Remove active class from all sidebar items
+        document.querySelectorAll('.sidebar-list li').forEach(item => {
+            item.classList.remove('active');
+        });
+
+        // Add active class to clicked item
+        event.currentTarget.classList.add('active');
+
+        // Hide all content sections
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.classList.remove('active');
+        });
+
+        // Show selected section
+        document.getElementById(sectionId).classList.add('active');
+
+        // Update banner
+        updateBanner(sectionId);
+    }
+
+    // Function to show section based on URL parameter
+    function showSectionFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const section = urlParams.get('section');
+
+        if (section) {
+            // Remove active class from all sections and sidebar items
+            document.querySelectorAll('.content-section').forEach(sec => {
+                sec.classList.remove('active');
+            });
+            document.querySelectorAll('.sidebar-list li').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Show the requested section
+            const targetSection = document.getElementById(section);
+            if (targetSection) {
+                targetSection.classList.add('active');
+
+                // Find and activate corresponding sidebar item
+                const sidebarItems = document.querySelectorAll('.sidebar-list li');
+                sidebarItems.forEach(item => {
+                    if (item.getAttribute('onclick').includes(section)) {
+                        item.classList.add('active');
+                    }
+                });
+
+                // Update banner for the URL section
+                updateBanner(section);
+            }
+        }
+    }
+
+    // Call the function when page loads
+    window.addEventListener('load', showSectionFromURL);
+</script>

@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Overview-Shivapuri Secondary School</title>
+     <link rel="icon" type="image/x-icon" href="images/school-logo1.png">
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        
+                header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 80px;
+            padding: 10px 1%;
+            background: rgba(0, 0, 0, 0.6);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 20;
+        }
+
+        .logo img {
+            height: 82px;
+            width: auto;
+            margin-left: 5px;
+            position: relative;
+            top: 22px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            position: relative;
+            margin: 0 15px;
+            right: 150px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 0;
+            display: inline-block;
+            transition: all 0.3s;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            color: #ff8a00;
+        }
+
+       
+nav ul .submenu {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.95);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  top: 100%; 
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  min-width: 200px;
+  z-index: 5;
+  display: flex; 
+  flex-direction: column;
+  padding: 10px 0; 
+  border-radius: 0 0 8px 8px;
+}
+
+nav ul li:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+}
+
+nav ul .submenu li {
+  margin: 0;
+  width: 100%;
+  display: block;
+  
+}
+
+nav ul .submenu li a {
+  color: white !important;
+  padding: 12px 20px !important;
+  display: block; 
+  font-size: 20px;
+  white-space: nowrap;
+  transition: all 0.3s;
+  position: relative;
+  left: 150px;
+}
+
+nav ul .submenu li a:hover {
+  background: #ff8a00;
+  color: white !important;
+  padding-left: 25px !important; 
+}
+.title1 a{
+  text-decoration: none;
+  color: #f3f3f3;
+  position: relative;
+  bottom: 50px;
+  left: 85px;
+  font-size: 22px;
+}
+        /* Banner Styles */
+        .banner {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 0;
+        }
+
+        .banner .card {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .banner .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .banner-text {
+            text-align: center;
+            color: white;
+            z-index: 2;
+        }
+
+        .banner-text h3 {
+            font-size: 2.5rem;
+            margin-bottom: 0;
+            font-weight: bold;
+            color: #fff; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7); 
+        }
+
+        /* Main Content Container */
+        .content-container {
+            display: flex;
+            min-height: calc(100vh - 400px);
+            position: relative;
+            padding-right: 100px;
+        }
+        
+        .sidebar {
+            width: 280px; 
+            background-color: #f8f9fa;
+            padding: 30px 15px 30px 200px;
+            border-right: 1px solid #e0e0e0;
+            
+        }
+        
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            max-width: calc(100% - 280px); 
+            padding-bottom: 80px; 
+        }
+        
+        .sidebar-title {
+            font-size: 22px; 
+            font-weight: bold;
+            color: #003366;
+            margin-bottom: 30px; 
+            padding-bottom: 12px; 
+            border-bottom: 2px solid #003366;
+            padding-left: 15px;
+        }
+        
+        .sidebar-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .sidebar-list li {
+            padding: 18px 20px 18px 30px; 
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+            font-size: 17px; 
+            font-weight: 500; 
+            cursor: pointer;
+            margin-bottom: 12px; 
+            border-radius: 8px; 
+            line-height: 1.4; 
+        }
+        
+        .sidebar-list li:last-child {
+            margin-bottom: 0;
+        }
+        
+        .sidebar-list li:hover {
+            border-left: 3px solid #003366;
+            background-color: #e9ecef;
+            transform: translateX(5px); 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+        }
+        
+        .sidebar-list li.active {
+            border-left: 3px solid #003366;
+            background-color: #e9ecef;
+            font-weight: 600; 
+            color: #003366; 
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #003366;
+            margin-top: 0;
+            margin-bottom: 25px;
+            max-width: 800px; 
+        }
+
+        h3 {
+            color: #003366;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            max-width: 800px; 
+        }
+
+        h4 {
+            color: #003366;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            max-width: 800px; 
+        }
+        
+        
+        p {
+            line-height: 1.7; 
+            color: #333;
+            margin-bottom: 18px;
+            max-width: 800px; 
+            text-align: justify; 
+            font-size: 16px; 
+            word-wrap: break-word; 
+            hyphens: auto; 
+        }
+
+        /* Special styling for the first paragraph in each section */
+        .content-section > p:first-of-type {
+            font-size: 17px;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        /* List styling within content */
+        .content-section ul {
+            max-width: 800px;
+            margin-bottom: 18px;
+        }
+
+        .content-section ul li {
+            line-height: 1.6;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        /* Strong text styling */
+        strong {
+            color: #003366;
+            font-weight: 600;
+        }
+        
+        .content-section {
+            display: none;
+        }
+        
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        
+        .back-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #003366;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 51, 102, 0.3);
+            font-weight: 500;
+            font-size: 14px;
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background-color: #004080;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 51, 102, 0.4);
+        }
+
+        .back-button::before {
+            content: "←";
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        
+        .content-wrapper {
+            max-width: 900px; /
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .main-content {
+                padding: 25px;
+                padding-bottom: 80px;
+            }
+            
+            p, h1, h3, h4, .content-section ul {
+                max-width: 700px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content-container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .main-content {
+                max-width: 100%;
+                padding: 20px;
+                padding-bottom: 80px;
+            }
+            
+            .banner-text h3 {
+                font-size: 2rem;
+            }
+
+            p, h1, h3, h4, .content-section ul {
+                max-width: 100%;
+            }
+
+            p {
+                font-size: 15px;
+                text-align: left; 
+            }
+
+           
+            .sidebar-list li {
+                font-size: 16px; 
+                padding: 16px 18px;
+            }
+
+            .sidebar-title {
+                font-size: 20px;
+            }
+
+            
+            .back-button {
+                bottom: 20px;
+                right: 20px;
+                padding: 12px 20px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-content {
+                padding: 15px;
+                padding-bottom: 80px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+          .too li{
+            font-size: 15px;
+          }
+            .sidebar-list li {
+                font-size: 15px;
+                padding: 14px 16px;
+            }
+
+            .sidebar-title {
+                font-size: 18px;
+            }
+
+           
+            .back-button {
+                bottom: 15px;
+                right: 15px;
+                padding: 10px 16px;
+                font-size: 12px;
+
+            }
+
+            .banner-text h3 {
+                font-size: 1.8rem;
+            }
+             table {
+  border-collapse: collapse;
+  width: 88%;
+  
+}
+
+th, td {
+  text-align: left;
+  padding: 12px;
+  font-size: 14px;
+}
+tr {
+    border-bottom: 1px solid #acaaaa;
+}
+        }
+        
+        @media (max-width: 768px) {
+            .calendar-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .calendar-nav {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+       table {
+  border-collapse: collapse;
+  width: 88%;
+  
+}
+th{
+    width: 10px;
+}
+th, td {
+  text-align: left;
+  padding: 18px;
+  font-size: 18px;
+}
+tr {
+    border-bottom: 1px solid #acaaaa;
+}
+.try{
+    text-decoration: none;
+    font-size: 18px;
+    color: #003366;
+
+}
+.try:hover{
+    color: #4f92d4;
+}
+ol{
+    padding-left: 20px;
+}
+ol li{
+    font-size: 16px;
+    padding: 8px;
+    text-align: start;
+}
+.ygg{
+    padding-left: 20px;
+}
+.header {
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            padding: 20PX 0;
+            margin-top: 100px;
+        }
+
+        .header img {
+            height: 60px;
+            /* or increase if needed */
+            width: 100%;
+            object-fit: cover;
+            max-width: 1100px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            gap: 40px;
+            background-color: #f9f9f9;
+        }
+
+
+        .left {
+            flex: 2;
+        }
+
+        .left h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .left h2 {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .left p {
+            font-size: 15px;
+            color: #444;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+
+        .left hr {
+            margin: 20px 0;
+        }
+
+        .create-account {
+            margin-top: 30px;
+        }
+
+        .create-account span {
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        .btn.create {
+            background-color: #e53935;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .right {
+            flex: 1;
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .right h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 14px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .btn.login {
+            background-color: #3399aa;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .btn.login:hover {
+            background-color: #2a7d8c;
+        }
+
+        .reset {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+   <header>
+        <div class="logo">
+ <img src="images/school-logo1.png" alt="scl-logo" class="logo">
+                        <h3 class="title1"><a href="homee.html">
+                            Shivapuri Secondary School
+                        </a></h3>       
+                     </div>
+                     <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a>
+                    <ul class="submenu">
+                        <li><a href="about-details.html?section=general-info">General Information</a></li>
+                        <li><a href="about-details.html?section=history">History</a></li>
+                        <li><a href="about-details.html?section=administrators">Current Administrators</a></li>
+                        <li><a href="about-details.html?section=presidents">Former President</a></li>
+                        <li><a href="about-details.html?section=facts">Facts & Figures</a></li>
+                        <li><a href="about-details.html?section=facilities">Facilities</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Admissions</a>
+                    <ul class="submenu">
+                        <li><a href="pre.html">Pre-School Level</a></li>
+                        <li><a href="primary.html">Primary School Level</a></li>
+                        <li><a href="lower.html">Lower Secondary Level</a></li>
+                        <li><a href="secondary.html">Secondary Level</a></li>
+                        <li><a href="higher.html">Higher Secondary Level</a></li>
+                        <li><a href="bachloer.html">Graduate</a></li>
+                    </ul>
+                </li>
+                <li><a href="department.html">Departments & Programs</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="visitor.html">Visitor</a>
+                    <ul class="submenu">
+                        <li><a href="info1.html">Visitor Information</a></li>
+                        <li><a href="info2.html">School Information</a></li>
+                        <li><a href="info3.html">Experience Our School</a></li>
+                    </ul>
+                </li>
+                <li><a href="student-life.html">Student Life</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Banner Section -->
+    <div class="banner">
+        <div class="card">
+            <img src="images/ukg.png" alt="School Banner">
+        </div>
+        <div class="banner-text">
+            <h3 id="banner-title">Overview</h3>
+        </div>
+    </div>
+
+    <!-- Content Container -->
+    <div class="content-container">
+        <div class="sidebar">
+            <div class="sidebar-title">U.K.G</div>
+            <ul class="sidebar-list">
+                <li class="active" onclick="showSection('overview')">Overview</li>
+                <li onclick="showSection('tracks')">Academic Tracks</li>
+                <li onclick="showSection('cirriculum')">Cirriculum</li>
+                <li onclick="showSection('apply')">Apply</li>
+             </ul>
+        </div>
+        
+        <div class="main-content">
+            <div class="content-wrapper">
+                <!-- General Info -->
+                <div id="overview" class="content-section active">
+                    <h1>Overview</h1>
+                    <p>Human development is an ongoing process. Learning is an aspect of human development. It continues from pregnancy to death. Early childhood or early childhood development is important as it is the cornerstone of human life.</p>
+                    
+                    <p>Therefore, the government has made special investments for the all-round development of its citizens. For this, the Government of Nepal has also made various provisions in the constitution, laws, policies, and programs.</p>
+
+                    <p>Article 39 (2) of the Constitution of Nepal ensures that every child has the right to education, health care, proper care, sports entertainment, and holistic personality development from the family and the state. Similarly, in Article 39 (3), every child has the right to early childhood development and child participation.</p>
+
+                    <p>The Education (Ninth Amendment) Act 2028 envisages one year of education for children who have completed four years of age. Similarly, Article 11T (1) of the same Act states that "the provisions related to the operation and management of early childhood development and education shall be as prescribed".</p>
+                </div>
+                
+                <!-- History -->
+                <div id="tracks" class="content-section">
+                    <h1>Academic Tracks</h1>
+                    
+                    <p>UKG features a comprehensive 4-hour daily schedule preparing students for primary school, with focused instruction in reading/writing, mathematics (1-100), and introductory science projects. The program emphasizes skill application through problem-solving tasks, show-and-tell presentations, and collaborative learning activities. Special attention is given to developing independence and critical thinking skills.</p>
+
+
+                    <br>
+                   <table>
+    <tr>
+      <th>Domain</th>
+      <th>Skills/Activities</th>
+    </tr>
+    <tr>
+      <td>Language</td>
+      <td>Reading simple sentences, creative writing, poems</td>
+    </tr>
+    <tr>
+      <td>Math</td>
+      <td>Addition/subtraction (1–100), time/money concepts, measurements</td>
+    </tr>
+    <tr>
+      <td>Science</td>
+      <td>Life cycles, magnets, simple machines, environmental care</td>
+    </tr>
+    <tr>
+      <td>Social Studies</td>
+      <td>Maps, transportation, national symbols, holidays</td>
+    </tr>
+    <tr>
+      <td>Projects</td>
+      <td>Show-and-tell, collaborative posters, science fair participation</td>
+    </tr>
+</table>
+
+                    <h3 class="too">Key Focus Areas</h3>
+                    <ul class="ygg">
+                        <li>School readiness (reading/writing fluency)</li>
+                        <li>Critical thinking & problem-solving</li>
+                        <li>Teamwork & leadership skills</li>
+                        <li>Advanced concept application</li>
+                    </ul>
+                   <table>
+    <tr>
+      <th>Time</th>
+      <th>Activity</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>8:30–9:00 AM</td>
+      <td>Morning Review</td>
+      <td>Recap previous day’s lessons</td>
+    </tr>
+    <tr>
+      <td>9:00–9:45 AM</td>
+      <td>Language & Writing</td>
+      <td>Sentence construction, journaling</td>
+    </tr>
+    <tr>
+      <td>9:45–10:30 AM</td>
+      <td>Math Workshop</td>
+      <td>Word problems, clock reading</td>
+    </tr>
+    <tr>
+      <td>10:30–11:00 AM</td>
+      <td>Snack & Science Talk</td>
+      <td>Q&A sessions (e.g., "Why do leaves fall?")</td>
+    </tr>
+    <tr>
+      <td>11:00–11:45 AM</td>
+      <td>Project-Based Learning</td>
+      <td>Group projects (e.g., "Build a Bridge")</td>
+    </tr>
+    <tr>
+      <td>11:45 AM–12:15 PM</td>
+      <td>Lunch & Peer Interaction</td>
+      <td>Table manners, conversation practice</td>
+    </tr>
+    <tr>
+      <td>12:15–1:00 PM</td>
+      <td>Skill Development</td>
+      <td>Computer basics/public speaking</td>
+    </tr>
+</table>
+
+
+                </div>
+
+                <div id="cirriculum" class="content-section">
+                    <h1>Cirriculum</h1>
+
+                    <p>The Early Childhood Development and Education Curriculum aim to lay the foundation for the holistic development of children and their learning. The curriculum emphasizes the interests, abilities, and needs of children as well as their holistic development, as well as ensuring early childhood development through the use of family and community resources and other resources in children's learning. In the current context, its goals, capabilities, development and learning areas and learning achievements, learning facilitation process, curriculum implementation criteria, evaluation process, and the role of the teacher are mentioned here.</p>
+
+                    <p>According to the policy document, the Early Childhood Development and Education curriculum places special emphasis on children's involvement in all-round development activities, development of healthy habits, adoption of personal safety measures, hygiene and social habits, creative thinking, and development of language and communication skills.</p>
+
+                    <p>Based on the above context, the following competencies have been determined for early childhood development and education:</p>
+
+                    <h3 class="too">(A) Competence</h3>
+
+                    <ol>
+                        <li>Use of language for expression and communication</li>
+                        <li>Identification of nutritious food items and daily use</li>
+                        <li>Following healthy habits and good social behavior and demonstrating the model as required</li>
+                        <li>Adopt personal security measures</li>
+                        <li>Use of thematic learning and creative thinking in the process of performing daily tasks</li>
+                        <li>Involvement in all-round development activities and use of basic skills in them</li>
+                    </ol>
+
+                   
+    <h3></h3>
+    <a href="pdfs/pre.pdf" target="_blank" class="try">Early Childhood Development(ECD) Cirriculum view</a>
+    <!-- <object class="pdf" 
+            data="pdfs/pre.pdf"
+            width="800"
+            height="500">
+    </object> -->
+                </div>
+                
+                <div id="apply" class="content-section">
+                    <h1>Apply</h1>
+                    <div class="container">
+        <!-- Left: Info Text -->
+        <div class="left">
+            <h2>Online Application System for Students</h2>
+            <br>
+
+            <p>This application system is used to collect information about Shivapuri SecondarySchool student
+                 admissions, including application, management, and result query.
+            </p>
+            <p><strong style="color: red;">The same email address is only allowed to be registered once a year .
+                </strong>Please register first when using this system for the first time.The email address and password
+                used during registration will be the only basis for candidates to apply and query results and other
+                information in this system.</p>
+
+            <hr />
+
+            <p>This Online Application System is for students Admission. Applicants may
+                complete, modify and submit the application form, check the application status in the Online Application
+                System.</p>
+            <p><strong style="color: red;">Each valid email address can be registered only once every year.</strong> The
+                email address and password you used in registration are the only credentials to enter the system.</p>
+
+            <div class="create-account">
+
+
+                <span>Not a user of this system yet? </span>
+                <a class="btn create" href="admission/account.html">Create An Account</a>
+            </div>
+        </div>
+
+        <!-- Right: Login Box -->
+        <div class="right" style="width: auto; height: 300px;">
+            <h3>Student Login</h3>
+            <form id="loginForm">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required />
+
+                <button type="submit" class="btn login">Log in</button>
+                <a class="reset" href="#">Password Reset</a>
+            </form>
+        </div>
+    </div>
+<div class="footer-container">
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> Email: shivapuri@enet.com.np</p>
+                <p><i class="fas fa-phone"></i> Phone: 4522877, 4510877</p>
+                <p><i class="fas fa-map-marker-alt"></i> Address: Maharajgunj, Kathmandu</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Admissions.html">Admissions</a></li>
+                    <li><a href="department.html">Departments & Programs</a></li>
+                    <li><a href="news.html">News and Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="twitter.com"><i class="fab fa-twitter"></i></a>
+                    <a href="instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="youtube.com"><i class="fab fa-youtube"></i></a>
+                    <a href="linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p style="margin-top: 20px;">Subscribe to our school</p>
+                <input type="email" placeholder="Your email" style="padding: 8px; width: 100%; border-radius: 4px; border: none;">
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shivapuri Secondary School. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+        e.preventDefault(); // Stop actual form submission
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        // Simple validation
+        if (!email || !password) {
+            alert("Please enter both email and password.");
+            return;
+        }
+
+        // Fake login handling
+        alert(`Logged in as: ${email}`);
+    });
+
+</script>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+
+    
+    <a href="Admissions.html" class="back-button">Back to Admission</a>
+
+</body>
+</html>
+
+
+    <script>
+        // Banner content for each section - only titles now
+        const bannerContent = {
+            'overview': {
+                title: 'Overview'
+            },
+            'tracks': {
+                title: 'Academic Tracks'
+            },
+            'aapply': {
+                title: 'Apply'
+            },
+            'cirriculum': {
+                title: 'Cirriculum'
+            }
+        };
+
+        function updateBanner(sectionId) {
+            const bannerTitle = document.getElementById('banner-title');
+            
+            if (bannerContent[sectionId]) {
+                bannerTitle.textContent = bannerContent[sectionId].title;
+            }
+        }
+
+        function showSection(sectionId) {
+            // Remove active class from all sidebar items
+            document.querySelectorAll('.sidebar-list li').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Add active class to clicked item
+            event.currentTarget.classList.add('active');
+            
+            // Hide all content sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Update banner
+            updateBanner(sectionId);
+        }
+
+        // Function to show section based on URL parameter
+        function showSectionFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const section = urlParams.get('section');
+            
+            if (section) {
+                // Remove active class from all sections and sidebar items
+                document.querySelectorAll('.content-section').forEach(sec => {
+                    sec.classList.remove('active');
+                });
+                document.querySelectorAll('.sidebar-list li').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Show the requested section
+                const targetSection = document.getElementById(section);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                    
+                    // Find and activate corresponding sidebar item
+                    const sidebarItems = document.querySelectorAll('.sidebar-list li');
+                    sidebarItems.forEach(item => {
+                        if (item.getAttribute('onclick').includes(section)) {
+                            item.classList.add('active');
+                        }
+                    });
+                    
+                    // Update banner for the URL section
+                    updateBanner(section);
+                }
+            }
+        }
+
+        // Call the function when page loads
+        window.addEventListener('load', showSectionFromURL);
+    </script>
+</body>
+</html>
