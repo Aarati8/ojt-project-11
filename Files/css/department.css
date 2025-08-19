@@ -1,0 +1,224 @@
+.box {
+        position: relative;
+        margin-bottom: 0px;
+        bottom: 200px;
+        border: 1px ;
+        
+      }
+
+      .tree {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        bottom: 750px;
+        gap: 100px;
+        
+        /* grid-area: ; */
+      }
+
+      .left-side {
+        display: flexbox;
+        flex-direction: column;
+        padding-left: 0px;
+        text-align: end;
+        /* gap: 10px; */
+        width: 75%;
+        
+        
+      }
+
+      .right-side {
+        width: 70%;
+        position: relative;
+        top: 45px;
+        display: flexbox;
+        flex-direction: column;
+        text-align: start;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .left-side ul li {
+        list-style: none;
+      }
+
+      .left-side h3 a {
+        color: black;
+        font-size: 30px;
+        line-height: 2.3em;
+        position: relative;
+        bottom: 40px;
+      }
+
+      .left-side ul li a {
+        color: black;
+        font-size: 18px;
+        column-gap: 10px;
+        line-height: 2.3em;
+        position: relative;
+        bottom: 40px;
+      }
+
+      .right-side ul li {
+        list-style: none;
+        padding-right: 20px;
+        
+      }
+
+      .right-side h3 a {
+        color: black;
+        font-size: 30px;
+        line-height: 2.3em;
+        position: relative;
+        bottom: 40px;
+        /* width: 75%; */
+      }
+
+      .right-side ul li a {
+        color: black;
+        font-size: 18px;
+        line-height: 2.3em;
+        position: relative;
+        bottom: 40px;
+      }
+
+      /* ul li{
+            list-style: none;
+            text-align: end;
+        }
+        ul li a{
+            color: black;
+            
+            
+        } */
+      .line {
+        width: 700px;
+        border: 1px solid #FDFF01;
+        height: 0px;
+        background: #FDFF01 ;
+        color: #FDFF01 ;
+        position: relative;
+        right: 46px;
+        bottom: 18px;
+      }
+
+      .line1 {
+        position: relative;
+        /* right: 0px; */
+        left: 74px;
+        border: 1px solid #FDFF01;
+        width: 700px;
+        height: 0px;
+        background: #FDFF01 ;
+        color: #FDFF01 ;
+        bottom: 18px;
+      }
+
+      .middle-container {
+        display: flex;
+        justify-content: center;
+        height: 120vh;
+      }
+
+      .middle {
+        border: none;
+        border-left: 2px solid #FDFF01;
+        height: 125%;
+        width: 0;
+        background: #FDFF01 ;
+        position: relative;
+        left: 10px;
+        margin: 0;
+        top: 65px;
+      }
+
+      .dot1 {
+        position: relative;
+        border-radius: 50%;
+        bottom: 29px;
+        left: 55.5px;
+        width: 10px;
+        height: 10px;
+        background: red;
+        display: inline-block;
+      }
+
+      .dot2 {
+        position: relative;
+        border-radius: 50%;
+        bottom: 28px;
+        right: 55px;
+        width: 10px;
+        height: 10px;
+        background: red;
+        display: inline-block;
+      }
+      .hall{
+        font-size: 25px;
+        color:black;
+        text-align: end;
+        position: relative;
+        bottom: 40px;
+      }
+      .hall1{
+        font-size: 25px;
+        color:black;
+        text-align:start ;
+        position: relative;
+        bottom: 40px;
+      }
+      .logon{
+        justify-content: center;
+        display: block;  
+        margin: auto;
+        position: absolute;
+        right: 700px;
+        top: -25px;
+        height: 102px;
+        width: 102px;
+        /* right: 500px; */
+      }
+      .cont {
+        background: white;
+        width: 70%;
+        position: relative;
+        height: 50px;
+        bottom: 133px;
+        padding-top: 10px;
+        padding-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        /* margin-bottom: 100px; */
+        margin-top: 10;
+        margin-bottom: 60px;
+      }
+      .banner img{
+        height: 500px;
+        width: 100%;
+        background: none;
+      }
+      .hero-title{
+        font-size: 78px;
+        color: rgb(237, 233, 233);
+        text-align: center;
+        position: relative;
+        bottom: 150px;
+        right: 110px;
+
+      }
+      .ln{
+        background: #FDFF01;
+        width: 70%;
+        position: relative;
+        height: 1px;
+        bottom: 205px;
+        /* padding-top: 1px;
+        padding-bottom: 0px; */
+        margin-left: auto;
+        margin-right: auto;
+        /* margin-bottom: 100px; */
+        margin-top: 10;
+        margin-bottom: 60px;
+      }

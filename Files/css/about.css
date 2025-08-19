@@ -1,0 +1,269 @@
+.banner {
+    position: relative;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.banner .card img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    
+    
+}
+
+.banner-text {
+    position: absolute;
+    top: 13.5%;
+    left: 0px;
+    color: #fff;
+    padding: 20px;
+    z-index: 2;
+    max-width: 100%;
+    height: 47%;
+    /* position: relative;
+    padding-bottom: 200px; */
+    /* background: rgba(0, 0, 0, 0.6); */
+}
+
+
+.banner-text h3 {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: 65px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.banner-text p {
+    font-size: 2.5rem;
+    line-height: 1.4;
+    margin: 0;
+    max-width: 95%;
+}
+
+
+
+.course {
+    width: 90%;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+
+
+.course-row {
+    position: relative;
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 60px;
+    overflow: visible;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Add shadow effects */
+.course-row:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.course-row:active {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(0);
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: -40px;
+    left: 20px;
+    right: auto;
+    width: 70%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    z-index: 10;
+    min-height: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(50%);
+    border-top: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.course-row:hover .text-overlay {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.course-row:active .text-overlay {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.course-row img {
+    width: 80%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.text-overlay h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.text-overlay p {
+    margin: 0;
+    color: #666;
+    font-size: 1rem;
+}
+
+
+
+
+.row:last-child .course-row {
+    max-width: 50%;
+}
+
+.row:last-child img {
+    height: 350px;
+}
+
+.row:last-child h3 {
+    font-size: 1.5rem;
+}
+
+.row:last-child p {
+    font-size: 1.2rem;
+}
+
+.course-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.course-link:hover {
+    transform: scale(1.05);
+}
+
+.course-row {
+    cursor: pointer;
+}
+
+
+footer {
+    background: #343434;
+    color: white;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.footer-column {
+    padding: 0 15px;
+}
+
+.footer-column h3 {
+    color: #f18930;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #f18930;
+}
+
+.footer-column p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.footer-links {
+    list-style: none;
+    text-align: start;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+    position: relative;
+    /* margin-left: 70px; */
+    /* left: 0; */
+    right: 42.5px;
+    text-align: start;
+    padding-left: 15px;
+}
+
+.footer-links li::before {
+    text-align: start;
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #f18930;
+}
+
+.footer-links a {
+    text-align: start;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f18930;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #f18930;
+}
+
+.footer-bottom {
+    background: #f18930;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-bottom p {
+    color: #343434;
+    margin: 0;
+    font-weight: 500;
+}

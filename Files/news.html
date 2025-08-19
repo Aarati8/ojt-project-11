@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>News-Shivapuri Secondary School</title>
+    <link rel="icon" type="image/x-icon" href="images/school-logo1.png">
+    <link rel="stylesheet" href="css/news.css">
+</head>
+<body>
+      <header>
+        <div class="logo">
+ <img src="images/school-logo1.png" alt="scl-logo" class="logo">
+                        <h3 class="title1"><a href="homee.html">
+                            Shivapuri Secondary School
+                        </a></h3>       
+                     </div>
+                     <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a>
+                    <ul class="submenu">
+                        <li><a href="about-details.html?section=general-info">General Information</a></li>
+                        <li><a href="about-details.html?section=history">History</a></li>
+                        <li><a href="about-details.html?section=administrators">Current Administrators</a></li>
+                        <li><a href="about-details.html?section=presidents">Former President</a></li>
+                        <li><a href="about-details.html?section=facts">Facts & Figures</a></li>
+                        <li><a href="about-details.html?section=facilities">Facilities</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Admissions</a>
+                    <ul class="submenu">
+                        <li><a href="pre.html">Pre-School Level</a></li>
+                        <li><a href="primary.html">Primary School Level</a></li>
+                        <li><a href="lower.html">Lower Secondary Level</a></li>
+                        <li><a href="secondary.html">Secondary Level</a></li>
+                        <li><a href="higher.html">Higher Secondary Level</a></li>
+                        <li><a href="bachloer.html">Graduate</a></li>
+                    </ul>
+                </li>
+                <li><a href="department.html">Departments & Programs</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="visitor.html">Visitor</a>
+                    <ul class="submenu">
+                        <li><a href="info1.html">Visitor Information</a></li>
+                        <li><a href="info2.html">School Information</a></li>
+                        <li><a href="info3.html">Experience Our School</a></li>
+                    </ul>
+                </li>
+                <li><a href="student-life.html">Student Life</a></li>
+            </ul>
+        </nav>
+    </header>
+                     <div class="carousel" style="background: transparent;">
+        <img src="images/school_drone_view.jpg" class="active" alt="Image 1">
+        <img src="images/b22.jpg" alt="Image 2">
+        <img src="images/b3.jpg" alt="Image 3">
+
+        <div class="content">
+            <h1>Latest News About Shivapuri</h1>
+            <!-- <p>We would like to provide each moment and news with you.</p> -->
+            <!-- <button style="padding-left: none; padding-right: none;">Learn More</button> -->
+        </div>
+    </div>
+    
+    <script>
+    const images = document.querySelectorAll('.carousel img');
+    let current = 0;
+
+    function showNextImage() {
+        images[current].classList.remove('active');
+        current = (current + 1) % images.length;
+        images[current].classList.add('active');
+    }
+
+    setInterval(showNextImage, 3000); // Change image every 3 seconds
+</script>
+<br>
+<div class="latest">
+    <h2>Latest News</h2>
+    <div class="row1">
+        <div class="l1">
+            <img src="images/sabina.jpg" alt="">
+            <h4>Engineering Student Scored 4.0 GPA</h4>
+            <p>We are incredibly proud to announce that our Computer Engineering Student Sabina Praja from Shivapuri Secondary School (Technical) has achieved a perfect 4.0 GPA in the SEE Examination.</p>
+        </div>
+         <div class="l2">
+        <img src="images/kmc.jpeg" alt="">
+        <h4>KMC Initiatives</h4>
+        <p>Mayor Balendra Shah has inspected Shivapuri Secondary School as part of his focus on educational reforms and development. </p>
+    </div>
+    <div class="l3">
+            <img src="images/collaboration.jpg" alt="">
+            <h4>Collaboration</h4>
+            <p>The school collaborates with schools in Japan, Pakistan, and India for international projects. </p>
+    </div>
+    <div class="l4">
+        <img src="images/artwork.jpg" alt="">
+        <h4>Students Artwork</h4>
+        <p>Students have done excellence artwork by exploring their creativity and gaining more ability and experiences.</p>
+    </div>
+     </div>
+     <br>
+    <div class="row2">
+    <div class="l1">
+        <img src="images/campaign.jpg" alt="">
+        <h4>School Health Programme:</h4>
+        <p>A Youth Champion conducted a session on menstrual hygiene, contraception, and safe abortion laws, engaging 42 students from Grade 8
+            and Nationwide Anti-Tobacco Campaign, a team from Central Department of Public Health </p>
+    
+    </div>
+    <div class="l2">
+        <img src="images/steam.jpg" alt="">
+        <h4>STEAM Workshop</h4>
+        <p>Shivapuri Secondary School is part of the Aavishkar STEAM Workshop initiative, which aims to create makerspaces in community schools. </p>
+    </div>
+    <div class="l3">
+        <img src="images/adm.png" alt="">
+        <h4>Academic Progress</h4>
+        <p>The school offers classes from primary to Grade 12, including a +2 Management program and a Computer Engineering technical program. </p>
+    </div>
+    <div class="l4">
+        <img src="images/b2.jpg" alt="">
+        <h4>Plus2 Management</h4>
+        <p>Shivapuri Secondary School and College offers a Plus2 Management program affiliated with the National Examination Board. </p>
+    </div>
+   
+    </div>
+    <br>
+    <div class="row3">
+        <div class="l1">
+            <img src="images/ncc-bank.jpg" alt="">
+            <h4>Community Engagement</h4>
+            <p>The school is actively involved in extracurricular activities and competitions, including participating in the President's Educational Reform Programme.</p>
+        </div>
+        <div class="l2">
+            <img src="images/isa.jpg" alt="">
+            <h4>International Recognization</h4>
+            <p>The school has been recognized by the British Council Nepal with the International School Award (ISA) for 2020-2023. </p>
+        </div>
+        
+        <div class="l3">
+            <img src="images/scolarship.jpg" alt="">
+            <h4>Scolarships</h4>
+            <p>Shivapuri Secondary School provides scholarships for students from the Dalit community, female students, and for those with merit and need. </p>
+        </div>
+        <div class="l4">
+            <img src="images/library_1.jpg">
+            <h4>Facility</h4>
+            <p>The school has a library, well-furnished classrooms, a science lab, counseling services, and a parking lot. </p>
+        </div>
+    </div>
+</div>
+<br>
+<div class="announcements">
+    <h2>Recent Announcements and Activities</h2>
+    <div class="r1">
+    <div class="a1">
+        <h4>Ear Screening Program:</h4>
+        <p>Shivapuri Secondary School recently participated in an ear screening program with Ear Care Nepal. </p>
+    </div>
+    <div class="a2">
+        <h4>STEAM Workshop:</h4>
+        <p>The school hosted a 3-day Aavishkar STEAM Workshop in collaboration with Karkhana and Kathmandu Metropolitan City. </p>
+    </div>
+    <div class="a2">
+        <h4>Scholarships:</h4>
+        <p>The school offers various scholarships, including Dalit scholarships, girls' scholarships, and merit/need-based scholarships. </p>
+    </div>
+    </div>
+    <div class="r2">
+    <div class="a11">
+        <h4>Admissions:</h4>
+        <ul>
+            <li>Admission for Nursery to Grade 9 usually begins in the first or second week of Baisakh (Nepali month) each academic year.</li>
+            <li>Application forms for Grade XI are available immediately after the SEE results are published.</li>
+            <li>Students who have achieved at least a C grade are eligible to apply for Grade XI. </li>
+        </ul>
+    </div>
+    <div class="a11">
+        <h4>Academic Programs:</h4>
+        <p>The school offers a wide range of programs, including classes from Primary to Grade 12, a Ten Plus Two (+2) Management program, and a Computer Engineering technical program for grades 9-12. </p>
+    </div>
+</div>
+    <div class="r3">
+    <div class="a1">
+        <h4>Undergraduate Program</h4>
+        <p>Shivapuri College, affiliated with Tribhuvan University, offers a Bachelor in Business Studies (BBS) program. </p>
+    </div>
+    <div class="a2">
+        <h4>Plus2 Management</h4>
+        <p>The school provides a strong foundation in management principles and practices, developing analytical and problem-solving skills. </p>
+    </div>
+    <div class="a3">
+        <h4>Community Engagement</h4>
+        <p>The school have actively participated in extracurricular activities,international  competitions like ISA program, model SAARCE confrences, etc.</p>
+    </div>
+    <div class="a4">
+        <h4>Farewell Program</h4>
+        <p>On the coming saturday, the school is going to organize farewell program to the SEE 2081 Batch. </p>
+    </div>
+    </div>
+</div>
+<br><br><br><br><br>
+<footer>
+<div class="footer-container">
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> Email: shivapuri@enet.com.np</p>
+                <p><i class="fas fa-phone"></i> Phone: 4522877, 4510877</p>
+                <p><i class="fas fa-map-marker-alt"></i> Address: Maharajgunj, Kathmandu</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Admissions.html">Admissions</a></li>
+                    <li><a href="department.html">Departments & Programs</a></li>
+                    <li><a href="news.html">News and Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="twitter.com"><i class="fab fa-twitter"></i></a>
+                    <a href="instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="youtube.com"><i class="fab fa-youtube"></i></a>
+                    <a href="linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p style="margin-top: 20px;">Subscribe to our school</p>
+                <input type="email" placeholder="Your email" style="padding: 8px; width: 100%; border-radius: 4px; border: none;">
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shivapuri Secondary School. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

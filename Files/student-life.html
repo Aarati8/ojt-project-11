@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Life-Shivapuri Secondary School</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/student-life.css">
+    
+</head>
+
+<body>
+     <header>
+        <div class="logo">
+ <img src="images/school-logo1.png" alt="scl-logo" class="logo" style="position: relative;
+            bottom: 2px;">
+                        <h3 class="title1"><a href="homee.html">
+                            Shivapuri Secondary School
+                        </a></h3>       
+                     </div>
+                     <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a>
+                    <ul class="submenu">
+                        <li><a href="about-details.html?section=general-info">General Information</a></li>
+                        <li><a href="about-details.html?section=history">History</a></li>
+                        <li><a href="about-details.html?section=administrators">Current Administrators</a></li>
+                        <li><a href="about-details.html?section=presidents">Former President</a></li>
+                        <li><a href="about-details.html?section=facts">Facts & Figures</a></li>
+                        <li><a href="about-details.html?section=facilities">Facilities</a></li>
+                    </ul>
+                </li>
+                <li><a href="Admissions.html">Admissions</a>
+                    <ul class="submenu">
+                        <li><a href="pre.html">Pre-School Level</a></li>
+                        <li><a href="primary.html">Primary School Level</a></li>
+                        <li><a href="lower.html">Lower Secondary Level</a></li>
+                        <li><a href="secondary.html">Secondary Level</a></li>
+                        <li><a href="higher.html">Higher Secondary Level</a></li>
+                        <li><a href="under.html">Graduate</a></li>
+                    </ul>
+                </li>
+                <li><a href="department.html">Departments & Programs</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="visitor.html">Visitor</a>
+                    <ul class="submenu">
+                        <li><a href="info1.html">Visitor Information</a></li>
+                        <li><a href="info2.html">School Information</a></li>
+                        <li><a href="info3.html">Experience Our School</a></li>
+                    </ul>
+                </li>
+                <li><a href="student-life.html">Student Life</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="banner">
+        <div class="card">
+            <img src="c:\\Users\\Hp\\Downloads\\Messenger_creation_4A6B03F0-44FC-445A-A407-F5EF48E58769.jpeg"
+                alt="School Banner">
+        </div>
+        <div class="banner-text">
+            <h3 id="banner-title">Athletics and Recreation</h3>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="sidebar">
+            <div class="sidebar-title">Student Life</div>
+            <ul class="sidebar-list">
+                <li class="active" onclick="showSection('athletics')">Athletics and Recreation</li>
+                <li onclick="showSection('health')">Health and Wellness</li>
+                <li onclick="showSection('arts')">Arts and Culture</li>
+                <li onclick="showSection('activities')">Student Activities</li>
+                <li onclick="showSection('calendar')">Academic Calendar</li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="content-wrapper">
+                <!-- Athletics Section -->
+                <div id="athletics" class="content-section active">
+                    <h1>Athletics and Recreation</h1>
+                    <p>At Shivapuri Secondary School, physical activity is considered an essential part of student
+                        development. We strive to maintain an environment where students not only focus on academics but
+                        also actively participate in sports and recreational programs. These activities help build
+                        discipline, teamwork, and confidence among students.</p>
+                    <h3>School Playground</h3>
+                    <p>Our open playground is a lively hub of activity during school hours. It serves as a multipurpose
+                        space for games, morning assemblies, PE classes, and casual breaks. Students enjoy playing
+                        football, volleyball, badminton, and other traditional games such as karate and chungi. Though
+                        modest in size, the playground is used daily and brings great energy to school life.
+                    </p>
+
+                    <h3>Annual Sports Week</h3>
+                    <div class="image-gallery">
+                        <img src="images/sports day1.jpg" alt="Sports Week Competition">
+                        <img src="images/sport day4.jpg" alt="Students Playing Football">
+                    </div>
+                    <p>One of the most exciting events at our school is the Annual Sports Week. Students from different
+                        grades and from different house form teams to compete in various athletic competitions like
+                        volleyball, baseketball, football,
+                        badminton and cricket. The event promotes healthy competition and unity, and medals
+                        and certificates are awarded to winners, making it a cherished memory for all.</p>
+
+                    <h3>Recreational Activities</h3>
+                    <p>Besides sports, students are encouraged to join recreational sessions such as group dancing,
+                        PT, and singing during club periods or before school events. These creative
+                        outlets provide balance and reduce stress, especially during exam seasons. Occasional movie
+                        screenings or storytelling sessions also help students unwind and have fun.</p>
+
+                    <h3>Team Representation</h3>
+                    <p>Selected students have the opportunity to represent Shivapuri in inter-school sports tournaments
+                        organized by local municipalities and education offices. These competitions help our students
+                        interact with peers from other schools and boost their confidence and sportsmanship.</p>
+                </div>
+
+                <!-- Health Section -->
+                <div id="health" class="content-section">
+                    <h1>Health and Wellness</h1>
+
+                    <div class="image-gallery">
+                        <img src="images/d14.jpg" alt="School Health Room">
+                        <img src="images/health camp5.jpg" alt="Health Awareness Program">
+                    </div>
+
+                    <p>The health and safety of our students is a top priority at Shivapuri Secondary School. While we
+                        may not have a full hospital on campus/school, we maintain essential health services and promote
+                        wellness through education and community support.
+                    </p>
+
+                    <h3>School Health Room</h3>
+                    <p>Our school maintains a simple but effective nurse room equipped with basic first-aid kits and
+                        supplies. Minor injuries, sudden illnesses, and health complaints are handled immediately by
+                        trained staff. Students who feel unwell during school hours are given initial care, and if
+                        necessary, parents are informed and appropriate steps are taken.</p>
+
+                    <h3>Emergency Response</h3>
+                    <p>In case of medical emergencies, our teachers and administrative staff are trained to respond
+                        quickly and responsibly. We have coordination with the nearest health post, and arrangements are
+                        made to transport students if needed. Emergency contact information for every student is safely
+                        kept and used when necessary.</p>
+
+                    <h3>Health Education</h3>
+                    <p>As part of our curriculum, we provide lessons on personal hygiene, nutrition, mental health, and
+                        adolescent development. Special sessions are conducted by visiting health professionals to
+                        educate students about common illnesses, menstruation hygiene, and healthy habits. These
+                        sessions are especially important for growing students in rural and semi-urban areas.</p>
+
+                    <h3>Awareness Programs</h3>
+                    <p>From time to time, health screening programs such as eye-checkups and dental checkups are
+                        organized in collaboration with local health volunteers and NGOs. The school also observes
+                        important dates like World Health Day with rallies, poster-making, and student-led presentations
+                        to spread awareness on health-related topics.</p>
+                </div>
+
+                <!-- Arts Section -->
+                <div id="arts" class="content-section">
+                    <h1>Arts and Culture</h1>
+
+                    <div class="arts-container">
+
+                        <div class="art-item">
+                            <img src="images/z56.jpg" alt="Newari Puja">
+                            <div class="art-text">
+                                <h3>Honoring Culture Through Rituals</h3>
+                                <p>Students and teachers participating in a traditional Newar cultural puja held within
+                                    the school premises. This ritual, rooted in centuries-old heritage, promotes
+                                    spiritual mindfulness and respect for ancestral customs. Such events give students
+                                    the opportunity to engage with Nepal's rich cultural legacy, building awareness and
+                                    appreciation of local traditions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="art-item">
+                            <img src="images/d17.jpg"
+                                alt="Teachers Receiving Awards">
+                            <div class="art-text">
+                                <h3>Honoring Our Educators</h3>
+                                <p>During our Annual Day celebration, dedicated teachers were honored with certificates
+                                    in recognition of their tireless efforts and commitment to quality education. This
+                                    reflects our deep appreciation for their contributions in shaping students' futures.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="art-item">
+                            <img src="images/d7.jpg" alt="Student Artwork Display">
+                            <div class="art-text">
+                                <h3>Student Art Exhibition</h3>
+                                <p>Our talented students showcase their creativity through beautiful collections of
+                                    drawings and paintings. The artwork captures themes like nature, culture, and
+                                    imagination, demonstrating deep observation and expression skills.</p>
+                            </div>
+                        </div>
+
+                        <div class="art-item">
+                            <img src="images/annual3.jpg" alt="Cultural Performance">
+                            <div class="art-text">
+                                <h3>Cultural Performances</h3>
+                                <p>Students perform traditional Nepali dances and cultural shows during our Annual Day
+                                    celebrations. These performances celebrate our rich cultural heritage and build
+                                    students' confidence from an early age.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activities Section -->
+                <div id="activities" class="content-section">
+                    <h1>Student Activities</h1>
+
+                    <div class="carousel-wrapper">
+                        <button class="carousel-button left" onclick="changeSlide(-1)">❮</button>
+                        <div class="carousel-manual">
+                            <img src="images/d4.jpg" alt="Student Activity 1"
+                                class="carousel-slide active">
+                            <img src="images/d8.jpg" alt="Student Activity 2"
+                                class="carousel-slide">
+                            <img src="images/d7.jpg" alt="Student Activity 3"
+                                class="carousel-slide">
+                            <img src="images/d5.jpg" alt="Student Activity 4"
+                                class="carousel-slide">
+                        </div>
+                        <button class="carousel-button right" onclick="changeSlide(1)">❯</button>
+                    </div>
+
+                    <p>Shivapuri Secondary School offers a vibrant mix of co-curricular activities that allow
+                        students
+                        to explore their passions and grow as active members of society. These activities
+                        provide a
+                        balance to academics and encourage students to be expressive, responsible, and creative.
+                    </p>
+
+                    <h3>Cultural Celebrations</h3>
+                    <p>We celebrate events such as <strong>Children’s Day, Constitution Day, Saraswati Puja,
+                            National
+                            Democracy Day</strong>, and other special occasions. Students actively participate
+                        in
+                        <strong>dance, drama, music, poetry, and storytelling performances</strong> that
+                        showcase our
+                        rich culture and student talent. These events are filled with joy and enthusiasm,
+                        uniting the
+                        school community.
+                    </p>
+
+                    <h3>Competitions and Challenges</h3>
+                    <p>The school regularly organizes <strong>essay writing, art and drawing, quiz contests,
+                            speech
+                            competitions, spelling bees</strong>, and math challenges. These activities help
+                        students
+                        develop confidence, communication skills, and critical thinking. Inter-house and
+                        inter-grade
+                        competitions bring a fun and competitive spirit to the school year.</p>
+
+                    <h3>Student Clubs</h3>
+                    <ul>
+                        <li><strong>STEAM Club:</strong> Explores Science, Technology, Engineering, Arts, and
+                            Mathematics through experiments and innovative projects.</li>
+                        <li><strong>BABA Club:</strong> Focuses on environmental cleanliness, tree planting, and
+                            maintaining school greenery.</li>
+                        <li><strong>Eco Club:</strong> Works on sustainability, recycling, and environmental
+                            conservation education.</li>
+                        <li><strong>Canopy Nepal Programs:</strong> Provides creative workshops, life skills training,
+                            and digital education sessions.</li>
+                    </ul>
+
+                    <h3>Community Engagement</h3>
+                    <p>Students participate in <strong>school sanitation drives, anti-drug awareness rallies, and health
+                            camps</strong>, helping them become responsible and socially aware citizens.</p>
+                </div>
+
+                <!-- Calendar Section -->
+                <div id="calendar" class="content-section">
+                    <h1>Academic Calendar</h1>
+
+                    <div class="calendar-container">
+                        <p>Our academic year follows the Nepali calendar system with important academic and cultural
+                            events marked throughout the year.</p>
+
+                        <div class="calendar-layout">
+                            <div class="calendar-images">
+                                <!-- First Image -->
+                                <div class="calendar-image">
+                                    <img src="images/cal1.jpg" alt="Academic Calendar Image 1">
+                                </div>
+                                <!-- Second Image -->
+                                <div class="calendar-image">
+                                    <img src="images/cal2.jpg" alt="Academic Calendar Image 2">
+                                </div>
+                            </div>
+                            <div class="calendar-content">
+                                <div class="calendar-grid">
+                                    <!-- Baisakh -->
+                                    <div class="calendar-item">
+                                        <h4>🔵 Baisakh 2082 (Apr/May 2025)</h4>
+                                        <p><strong>Start of New Academic Session:</strong> Baisakh 1 (April 14)</p>
+                                        <p><strong>Class Operation Begins:</strong> Baisakh 3 (April 16)</p>
+                                        <p><strong>Holidays:</strong><br>
+                                            - Baisakh 10 (April 23): Loktantra Day<br>
+                                            - Baisakh 18 (May 1): International Labour Day</p>
+                                    </div>
+
+                                    <!-- Jestha -->
+                                    <div class="calendar-item">
+                                        <h4>🔵 Jestha 2082 (May/June 2025)</h4>
+                                        <p>- Internal Evaluation Work</p>
+                                        <p>- Formative Assessment Begins</p>
+                                        <p>- Extra-curricular Activities Planning</p>
+                                        <p><strong>Holidays:</strong><br>
+                                            - Jestha 17 (May 30): Republic Day</p>
+                                    </div>
+
+                                    <!-- Ashar -->
+                                    <div class="calendar-item">
+                                        <h4>🔵 Ashar 2082 (June/July 2025)</h4>
+                                        <p><strong>First Terminal Examination:</strong> Ashar 1–10 (June 15–24)</p>
+                                        <p><strong>Exam Result Distribution:</strong> Ashar 15 (June 29)</p>
+                                        <p><strong>Parents-Teachers Meeting:</strong> Ashar 16 (June 30)</p>
+                                    </div>
+
+                                    <!-- Shrawan -->
+                                    <div class="calendar-item">
+                                        <h4>🔵 Shrawan 2082 (July/August 2025)</h4>
+                                        <p>- Class Operation + Assessment Review</p>
+                                        <p><strong>Holidays:</strong><br>
+                                            - Shrawan 6 (July 21): Guru Purnima<br>
+                                            - Shrawan 12 (July 27): Eid al-Adha<br>
+                                            - Shrawan 17 (August 1): Gaijatra</p>
+                                    </div>
+
+                                    <!-- Bhadra -->
+                                    <div class="calendar-item">
+                                        <h4>🔵 Bhadra 2082 (August/September 2025)</h4>
+                                        <p><strong>Second Terminal Examination:</strong> Bhadra 22–31 (Sept. 7–16)</p>
+                                        <p><strong>Holidays:</strong><br>
+                                            - Bhadra 1 (August 17): Janai Purnima / Raksha Bandhan<br>
+                                            - Bhadra 6 (August 22): Krishna Janmashtami</p>
+                                    </div>
+
+                                    <!-- Ashoj -->
+                                    <div class="calendar-item">
+                                        <h4>🔵 Ashoj 2082 (September/October 2025)</h4>
+                                        <p>- Extra-Curricular Activities</p>
+                                        <p><strong>Festival Camp:</strong> Ashoj 26–30 (October 13–17)</p>
+                                    </div>
+
+                                    <!-- Kartik -->
+                                    <div class="calendar-item">
+                                        <h4>🔵 Kartik 2082 (October/November 2025)</h4>
+                                        <p><strong>Tihar Holiday Period:</strong> Kartik 8–15 (October 24–31)</p>
+                                        <p>- Class resumes after holidays</p>
+                                        <p><strong>Holidays:</strong><br>
+                                            - Kartik 1 (Oct 17): Kojagrat Purnima<br>
+                                            - Kartik 7–11 (Oct 23–27): Tihar</p>
+                                    </div>
+
+                                    <!-- Mangsir -->
+                                    <div class="calendar-item">
+                                        <h4>🔵 Mangsir 2082 (November/December 2025)</h4>
+                                        <p>- Pre-board Exam Preparation for Grade 12</p>
+                                        <p>- Extra Academic Support for Grades 10 & 12</p>
+                                        <p><strong>Holidays:</strong><br>
+                                            - Mangsir 5 (Nov 21): Udhauli Parva</p>
+                                    </div>
+
+                                    <!-- Poush -->
+                                    <div class="calendar-item">
+                                        <h4>🔵 Poush 2082 (December 2025/January 2026)</h4>
+                                        <p><strong>Third Terminal Examination:</strong> Poush 4–14 (Dec 19–29)</p>
+                                        <p><strong>Winter Camp:</strong> Poush 22–26 (Jan 6–10)</p>
+                                    </div>
+
+                                    <!-- Magh -->
+                                    <div class="calendar-item">
+                                        <h4>🔵 Magh 2082 (January/February 2026)</h4>
+                                        <p><strong>Report Distribution:</strong> Magh 5 (Jan 19)</p>
+                                        <p>- Parents Meeting and Discussions</p>
+                                        <p>- Regular Classes + Preparations</p>
+                                        <p>- Grade 10 & 12 Pre-Board Examination</p>
+                                    </div>
+
+                                    <!-- Falgun -->
+                                    <div class="calendar-item">
+                                        <h4>🔵 Falgun 2082 (February/March 2026)</h4>
+                                        <p>- Internal Evaluation for Lower Grades</p>
+                                        <p>- External Practice Tests for Grades 10 & 12</p>
+                                        <p><strong>Holidays:</strong><br>
+                                            - Falgun 7 (Feb 19): Maha Shivaratri<br>
+                                            - Falgun 23 (March 7): Holi (Terai)</p>
+                                    </div>
+
+                                    <!-- Chaitra -->
+                                    <div class="calendar-item">
+                                        <h4>🔵 Chaitra 2082 (March/April 2026)</h4>
+                                        <p><strong>Final Examination Period:</strong> Chaitra 4–12 (March 18–26)</p>
+                                        <p><strong>Result Distribution:</strong> Chaitra 25 (April 8)</p>
+                                        <p><strong>Holidays:</strong><br>
+                                            - Chaitra 13 (March 27): Ghode Jatra</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <a href="homee.html" class="back-button">Back to Home</a>
+            </div>
+             <script>
+                    const bannerContent = {
+                        'athletics': { title: 'Athletics and Recreation' },
+                        'health': { title: 'Health and Wellness' },
+                        'arts': { title: 'Arts and Culture' },
+                        'activities': { title: 'Student Activities' },
+                        'calendar': { title: 'Academic Calendar' }
+                    };
+
+                    function updateBanner(sectionId) {
+                        const bannerTitle = document.getElementById('banner-title');
+                        if (bannerContent[sectionId]) {
+                            bannerTitle.textContent = bannerContent[sectionId].title;
+                        }
+                    }
+
+                    function showSection(sectionId) {
+                        // Remove active class from all sidebar items
+                        document.querySelectorAll('.sidebar-list li').forEach(item => {
+                            item.classList.remove('active');
+                        });
+
+                        // Add active class to clicked item
+                        event.currentTarget.classList.add('active');
+
+                        // Hide all content sections
+                        document.querySelectorAll('.content-section').forEach(section => {
+                            section.classList.remove('active');
+                        });
+
+                        // Show selected section
+                        document.getElementById(sectionId).classList.add('active');
+
+                        // Update banner
+                        updateBanner(sectionId);
+                    }
+
+                    // Carousel functionality
+                    let slideIndex = 0;
+                    const slides = document.querySelectorAll(".carousel-slide");
+
+                    function showSlide(index) {
+                        slides.forEach((slide, i) => {
+                            slide.classList.remove("active");
+                            if (i === index) {
+                                slide.classList.add("active");
+                            }
+                        });
+                    }
+
+                    function changeSlide(n) {
+                        slideIndex += n;
+                        if (slideIndex >= slides.length) slideIndex = 0;
+                        if (slideIndex < 0) slideIndex = slides.length - 1;
+                        showSlide(slideIndex);
+                    }
+
+                    // Auto-advance carousel
+                    setInterval(() => {
+                        changeSlide(1);
+                    }, 5000);
+
+                    // Initialize page
+                    window.addEventListener('load', () => {
+                        const urlParams = new URLSearchParams(window.location.search);
+                        const section = urlParams.get('section');
+                        if (section && document.getElementById(section)) {
+                            document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
+                            document.querySelectorAll('.sidebar-list li').forEach(item => item.classList.remove('active'));
+
+                            document.getElementById(section).classList.add('active');
+                            const sidebarItems = document.querySelectorAll('.sidebar-list li');
+                            sidebarItems.forEach(item => {
+                                if (item.getAttribute('onclick').includes(section)) {
+                                    item.classList.add('active');
+                                }
+                            });
+                            updateBanner(section);
+                        }
+                        showSlide(slideIndex);
+                    });
+                </script>
+            <footer>
+<div class="footer-container">
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> Email: shivapuri@enet.com.np</p>
+                <p><i class="fas fa-phone"></i> Phone: 4522877, 4510877</p>
+                <p><i class="fas fa-map-marker-alt"></i> Address: Maharajgunj, Kathmandu</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Admissions.html">Admissions</a></li>
+                    <li><a href="department.html">Departments & Programs</a></li>
+                    <li><a href="news.html">News and Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="twitter.com"><i class="fab fa-twitter"></i></a>
+                    <a href="instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="youtube.com"><i class="fab fa-youtube"></i></a>
+                    <a href="linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p style="margin-top: 20px;">Subscribe to our school</p>
+                <input type="email" placeholder="Your email" style="padding: 8px; width: 100%; border-radius: 4px; border: none;">
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shivapuri Secondary School. All rights reserved.</p>
+        </div>
+    </footer>
+               
+</body>
+
+</html>
