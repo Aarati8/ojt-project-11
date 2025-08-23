@@ -82,7 +82,7 @@ nav ul .submenu li a {
   white-space: nowrap;
   transition: all 0.3s;
   position: relative;
-  left: 150px;
+  left: 80px;
 }
 
 nav ul .submenu li a:hover {
